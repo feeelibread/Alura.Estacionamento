@@ -1,3 +1,4 @@
+using Alura.Estacionamento.Alura.Estacionamento.Modelos;
 using Alura.Estacionamento.Modelos;
 using Xunit;
 
@@ -23,10 +24,27 @@ namespace AluraEstacionamento.Testes
 
         [Fact]
         public void TestaVeiculoFrear()
-        {
+        {   
+            //Arrange
             var veiculo = new Veiculo();
+
+            //Act
             veiculo.Frear(10);
+
+            //Assert
             Assert.Equal(-150, veiculo.VelocidadeAtual);
+        }
+
+        [Fact]
+        public void TestaVeiculoTipo()
+        {
+            //Arrange
+            var veiculo = new Veiculo();
+
+            //Act
+
+            //Assert
+            Assert.Equal(TipoVeiculo.Automovel, veiculo.Tipo);
         }
     }
 }
