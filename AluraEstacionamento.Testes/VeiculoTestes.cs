@@ -8,8 +8,16 @@ namespace AluraEstacionamento.Testes
         [Fact]
         public void TestaVeiculoAcelerar()
         {
+
+            //Padrão de desenvolvimento AAA
+
+            //Arrange = Prepara o cenário para a criação de métodos a serem testados
             var veiculo = new Veiculo();
+
+            //Act = O método que queremos testar
             veiculo.Acelerar(10);
+
+            //Assert = Verificar se os testes foram bem
             Assert.Equal(100, veiculo.VelocidadeAtual);
         }
 
